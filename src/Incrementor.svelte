@@ -28,6 +28,10 @@
     display: inline;
   }
 
+  .box {
+    border-top-color: var(--tan);
+  }
+
   h2 {
     display: block;
     margin: 0 0 1rem;

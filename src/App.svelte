@@ -11,20 +11,41 @@
   integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
   crossorigin="anonymous"
 />
+
+
 <Incrementor
   name="Width"
   size={$gridWidth}
   on:increment={(event) => grid.width(event.detail.value)}
-/>
-<Incrementor
+  />
+  <Incrementor
   name="Height"
   size={$gridHeight}
   on:increment={(event) => grid.height(event.detail.value)}
-/>
-<Transport />
-<Grid />
+  />
+  <Transport />
+  <Grid />
+  
+<a href="https://github.com/asmundwien/svelte-of-life" target="_blank">
+  <img
+    width="100"
+    src="https://pngimg.com/uploads/github/github_PNG15.png"
+    alt="github"
+  />
+</a>
 
-<style>
+<style lang="scss">
+  a {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 1rem;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   :global(:root) {
     --blue: #abd0e2;
     --darkblue: #4ac2f9;
