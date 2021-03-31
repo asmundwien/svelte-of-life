@@ -1,6 +1,6 @@
 import { writable, derived } from "svelte/store";
 
-const init = 7;
+const init = 9;
 
 function createGrid() {
   const { subscribe, set, update } = writable([[]]);
@@ -13,9 +13,10 @@ function createGrid() {
   }
 
   set(newRow(init).map((_) => newRow(init)));
-  setAlive(3, 2, true);
-  setAlive(3, 3, true);
+  setAlive(4, 3, true);
   setAlive(3, 4, true);
+  setAlive(4, 4, true);
+  setAlive(5, 4, true);
 
   function setWidth(i) {
     const diff = i - width;
@@ -81,7 +82,7 @@ function createGrid() {
           if (!isAlive && count == 3) {
             setAlive(x, y, true);
           } else if (isAlive) {
-            setAlive(x, y, count == 2 || count == 2);
+            setAlive(x, y, count == 2 || count == 3);
           }
         })
       );
